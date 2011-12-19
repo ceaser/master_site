@@ -2,6 +2,10 @@
 
 one:
   name: MyString
+  domain: MyString
+  database: MyString
 
 two:
   name: MyString
+  domain: MyString
+  database: MyString

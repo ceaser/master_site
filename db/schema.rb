@@ -11,15 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111219075202) do
+ActiveRecord::Schema.define(:version => 20111219101656) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
-    t.string   "subdomain"
     t.string   "domain"
     t.string   "database"
-    t.string   "socket"
-    t.string   "host"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

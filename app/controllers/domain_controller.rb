@@ -8,12 +8,6 @@ class DomainController < ApplicationController
     configurations = @customer.configurations[Rails.env].clone
     configurations["database"] = @customer.database unless @customer.database.nil?
 
-    if @customer.host.nil?
-      configurations["socket"] = @customer.socket
-    else
-      configurations["host"] = @customer.host
-    end
-
     begin
       ActiveRecord::Base.establish_connection(configurations)
       yield

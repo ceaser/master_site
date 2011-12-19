@@ -1,7 +1,10 @@
 class CreateCustomers < ActiveRecord::Migration
   def change
     create_table :customers do |t|
-      t.string :name, :subdomain, :domain, :database, :socket, :host
+      t.string :name
+      t.string :domain
+      t.string :database
+
       t.timestamps
     end
   end
