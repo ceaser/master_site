@@ -13,4 +13,4 @@ directory of the project.
 http://www.oceanic.com:3000 or http://www.acme.com:3000 for customer sites
 
 6. If you add additional client you must run
-`rake db:customer:create db:customer:migrate` and add them to your host file
+`rake new_customer` and add them to your host file
