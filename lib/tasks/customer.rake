@@ -4,7 +4,6 @@ namespace :db do
       customers = Customer.find(:all)
       customers.each do |customer|
         begin
-          next if customer.database.nil?
           puts "running: mysqladmin create #{customer.database}"
           `mysqladmin create #{customer.database}`
         rescue
@@ -37,6 +36,6 @@ namespace :db do
       end
     end
   end
-
 end
 
+task :new_customer => ["db:customer:create", "db:customer:migrate"]
